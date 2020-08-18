@@ -49,7 +49,7 @@ void insert_data(){
 
     }
 
-    system("clear");
+    system("cls");
 
 
 }
@@ -77,7 +77,7 @@ void display_data(){
     cin>>c;
 
     if(c == 'x' || c == 'X')
-        system("clear");
+        system("cls");
 
 }
 
@@ -113,7 +113,7 @@ void search_donor(){
     cin>>c;
 
     if(c == 'x' || c == 'X')
-        system("clear");
+        system("cls");
 
 
 }
@@ -170,7 +170,7 @@ void delete_data(){
 
     }
 
-    system("clear");
+    system("cls");
 
 }
 
@@ -226,7 +226,7 @@ void modify_data(){
 
     }
 
-    system("clear");
+    system("cls");
 
 }
 
