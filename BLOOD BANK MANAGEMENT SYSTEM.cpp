@@ -13,10 +13,10 @@ typedef struct blood_management{
 
 }blood_management;
 
-int n = 0;
-blood_management bm[101];
+int n = 0;                                                //Declaring global variable for counting how many data we have
+blood_management bm[101];                                //Declaring structure array for storing data
 
-void insert_data(){
+void insert_data(){                                     //Function for inserting data
 
     char c;
 
@@ -54,7 +54,7 @@ void insert_data(){
 
 }
 
-void display_data(){
+void display_data(){                                        //Function for printing data
 
     int i;
 
@@ -81,7 +81,7 @@ void display_data(){
 
 }
 
-void search_donor(){
+void search_donor(){                                        //Function for searching data
 
     string s;
 
@@ -118,7 +118,7 @@ void search_donor(){
 
 }
 
-void delete_data(){
+void delete_data(){                                     //Function for deleting data
 
     string data;
     int pos,i,f;
@@ -131,11 +131,11 @@ void delete_data(){
         cout<<"\t\t\t\t\tEnter ID : ";
         cin>>data;
 
-        for(i=0; i<n; i++){
+        for(i=0; i<n; i++){                                   //start Searching                        
 
-            if(data == bm[i].id){
-
-                pos = i;
+            if(data == bm[i].id){                           ////Found data
+                
+                pos = i;                                   //storing position of searched data in variable pos                                                
                 f++;
                 break;
 
@@ -147,7 +147,7 @@ void delete_data(){
 
             for(i=pos; i<n-1; i++){
 
-                bm[i] = bm[i+1];
+                bm[i] = bm[i+1];                    //deleting data
 
             }
 
@@ -174,7 +174,7 @@ void delete_data(){
 
 }
 
-void modify_data(){
+void modify_data(){                                     //Function for editing data
 
     int pos,i;
     char c;
@@ -191,12 +191,13 @@ void modify_data(){
 
         cout<<endl;
 
-        for(i=0; i<n; i++){
+        for(i=0; i<n; i++){                         //start Searching 
 
-            if(data == bm[i].id){
+            if(data == bm[i].id){                  //Found data
 
-                pos = i;
-
+                pos = i; //storing position of searched data in variable pos
+                break;
+                
             }
 
         }
@@ -230,7 +231,7 @@ void modify_data(){
 
 }
 
-int main (){
+int main (){                                        //Main function
 
     int k;
 
@@ -252,7 +253,7 @@ int main (){
 
         getchar();
 
-        if(k == 1) insert_data();
+        if(k == 1) insert_data();               
 
         else if(k == 2) display_data();
 
